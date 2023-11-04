@@ -1,0 +1,39 @@
+ask user for player count
+ask user how they want to their player to play.
+    Property buy threshold
+    House buy threshold
+    Mortgage threshold
+Set npc play-style
+    Property buy threshold - if afford plus 10%
+    House buy threshold - if afford plus 25%
+    Mortgage threshold - if monopoly
+Make turn function
+    if player state jail
+        run jail
+    Roll dice - two randint(1-6)
+    Square check
+        if on property
+            is owned?
+                yes
+                    pay other player amount found in properties.py
+                no
+                    would player like to buy
+                        if threshold true
+                            buy property.
+                                run property buy function
+        if on chance
+            run chance
+        if on community chest
+            run community chest
+        if on jail
+            jail
+                set player state jail
+        if tax
+            deduct money
+    if player square count reset plus 200$
+    if doubles
+        run turn
+    if house buy threshold
+        buy house starting with highest number going down and total house avg less than 5
+cycle trough players until only one player is not bankrupt
+    one loop ends. Present user with data.
