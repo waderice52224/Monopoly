@@ -5,6 +5,10 @@ class RailRoad(Space):
         self.rent = rent
         self.mortgate = mortgage
         self.unmortgage = unmortgage
+        self.owned = False
 
+    def canbuy(self):
+        return True
 
-# Properties("B & O Railroad", rent1=25, rent2=50, rent3=100, rent4=200, mortgage=100, unmortgage=110)
+    def purchase(self):
+        self.owned = True

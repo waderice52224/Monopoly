@@ -11,3 +11,7 @@ class Space:
         return self.name
     def getCost(self):
         return self.cost
+
+    def canbuy(self):
+        return False
+

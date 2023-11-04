@@ -1,5 +1,7 @@
 from Spaces import Space
-class Properties(Space):
+
+
+class Property(Space):
     def __init__(self, name, val, rent, rentm, rent1, rent2, rent3, rent4, rent5, house, cost, mortgage, unmortgage):
         super().__init__(name, val, cost)
         self.rent = rent
@@ -13,10 +15,17 @@ class Properties(Space):
         self.cost = cost
         self.mortgage = mortgage
         self.unmortgage = unmortgage
+        self.owned = False
 
+    def canbuy(self):
+        if not self.owned:
+            return True
+        return False
 
+    def purchase(self):
+        self.owned = True
 
-
-
+    def getCost(self):
+        return self.cost
 
 
