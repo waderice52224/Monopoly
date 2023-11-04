@@ -1,8 +1,7 @@
 from Spaces import Space
 class Properties(Space):
     def __init__(self, name, val, rent, rentm, rent1, rent2, rent3, rent4, rent5, house, cost, mortgage, unmortgage):
-        self.name = name
-        super().__init__(val)
+        super().__init__(name, val, cost)
         self.rent = rent
         self.rentm = rentm
         self.rent1 = rent1
@@ -15,9 +14,6 @@ class Properties(Space):
         self.mortgage = mortgage
         self.unmortgage = unmortgage
 
-
-    def getNameOfSpace(self):
-        return self.name
 
 
 

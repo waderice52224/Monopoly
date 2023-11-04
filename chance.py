@@ -1,9 +1,9 @@
 import properties
 from Spaces import Space
 
-class Chance(Space):
+class Chance:
     def __init__(self, val, money, goto, jail):
-        super.__init__(val)
+        self.val = val
         self.money = money
         self.goto = goto
         self.jail = jail

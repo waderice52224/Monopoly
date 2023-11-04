@@ -1,9 +1,13 @@
 class Space:
-    def __init__(self, val):
+    def __init__(self, name, val, cost=0):
+        self.name = name
         self.spaceVal = val
+        self.cost = cost
 
     def getBoardVal(self):
         return self.spaceVal
 
     def getNameOfSpace(self):
-        return "TODO"
+        return self.name
+    def getCost(self):
+        return self.cost
