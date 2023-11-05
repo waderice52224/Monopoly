@@ -1,7 +1,7 @@
 import random
-from Board import *
-from player import Player
 
+from player import Player
+from monopoly.Board import *
 players = []
 def makePlayer(playerName):
     player = Player(playerName, 40, 1500, [])
@@ -26,12 +26,28 @@ if playerCount > 4 or playerCount < 2:
 for i in range(playerCount):
     players.append(makePlayer("Player " + str(i + 1)))
 
+test = random.randint(0, 39)
+players[0].checkSpace(board[test])
+print(board[test].getNameOfSpace())
+print((board[test].getCost()))
 
-while not isPlayersBankrupt():
-    for i in players:
-        i.rollDice()
-        if board[i.getPosistion()-1].canbuy():
-            i.buyProperty(board[i.getPosistion()-1], board[i.getPosistion()-1].getCost())
-
+print()
+print(players[0].getName())
 print(players[0].getMoney())
-print(players[1].getMoney())
+if len(players[0].properties) > 0:
+    print(players[0].properties[0].getNameOfSpace())
+else:
+    print("Player has no properties")
+
+
+
+
+
+#A very Basic game loop that lets players buy properties
+# while not isPlayersBankrupt():
+#     for i in players:
+#         i.rollDice()
+#         if board[i.getPosistion()-1].canbuy():
+#             i.buyProperty(board[i.getPosistion()-1], board[i.getPosistion()-1].getCost())
+
+

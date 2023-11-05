@@ -2,8 +2,8 @@ from Spaces import Space
 
 
 class Property(Space):
-    def __init__(self, name, val, rent, rentm, rent1, rent2, rent3, rent4, rent5, house, cost, mortgage, unmortgage):
-        super().__init__(name, val, cost)
+    def __init__(self, name, val, rent, rentm, rent1, rent2, rent3, rent4, rent5, house, typeSpace, cost, mortgage, unmortgage):
+        super().__init__(name, val, typeSpace, cost)
         self.rent = rent
         self.rentm = rentm
         self.rent1 = rent1

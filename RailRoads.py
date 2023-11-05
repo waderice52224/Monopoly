@@ -1,7 +1,7 @@
 from Spaces import Space
 class RailRoad(Space):
-    def __init__(self, name, val, rent, cost, mortgage, unmortgage):
-        super().__init__(name, val, cost)
+    def __init__(self, name, val, rent, typeSpace, cost, mortgage, unmortgage):
+        super().__init__(name, val, typeSpace, cost)
         self.rent = rent
         self.mortgate = mortgage
         self.unmortgage = unmortgage
@@ -12,3 +12,6 @@ class RailRoad(Space):
 
     def purchase(self):
         self.owned = True
+
+    def getCost(self):
+        return self.cost
